@@ -6,39 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minha Marca</title>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
             text-decoration: none;
             border: none;
         }
-        header{
+
+        header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             border: 1px solid black;
         }
-        nav a{
+
+        nav a {
             background-color: black;
             color: white;
             margin: 0px 2px;
             padding: 10px 15px;
         }
+
         #principal {
             background-color: gray;
             text-align: center;
         }
-        #principal h2{
+
+        #principal h2 {
             padding-top: 45px;
         }
-        #principal p{
+
+        #principal p {
             padding-top: 20px;
             width: 400px;
             margin: auto;
         }
-        #principal button{
+
+        #principal button {
             margin: 30px;
             padding: 15px 20px;
+        }
+        #lista {
+            display: flex;
+            justify-content: space-around;
+        }
+        #lista .caixa{
+            margin-top: 20px;
+            background-color: gray;
+            text-align: center;
+            border-radius: 5px;
+            width: 300px;
+            padding: 20px;
+        }
+        .caixa h3{
+            padding-top: 15px;
+        }
+        .caixa p{  
+            padding-top: 15px;
+            padding-bottom: 20px;
+            
         }
     </style>
 </head>
@@ -57,7 +83,20 @@
         <p>Nosso produto ajuda você a alcançar seus objetivos de forma, simples, rápida e eficiente.</p>
         <button>Quero Começar Agora</button>
     </section>
-    section#
+    <section id="lista">
+        <div class="caixa">
+            <h3>Rápido</h3>
+            <p>Obtenha resultados em tempo record com nossa solução.</p>
+        </div>
+        <div class="caixa">
+            <h3>Siples</h3>
+            <p>Interface amigável para rodos os níveis de experiência.</p>
+        </div>
+        <div class="caixa">
+            <h3>Seguro</h3>
+            <p>Seus dados estão protegidos com criptografia de ponta</p>
+        </div>
+    </section>
 </body>
 
 </html>

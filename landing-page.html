@@ -13,6 +13,11 @@
             border: none;
         }
 
+        body {
+            max-width: 1200px;
+            margin: auto;
+        }
+
         header {
             display: flex;
             justify-content: space-between;
@@ -38,7 +43,7 @@
 
         #principal p {
             padding-top: 20px;
-            width: 400px;
+            max-width: 400px;
             margin: auto;
         }
 
@@ -46,57 +51,101 @@
             margin: 30px;
             padding: 15px 20px;
         }
+
         #lista {
             display: flex;
             justify-content: space-around;
+            flex-wrap: wrap;
         }
-        #lista .caixa{
-            margin-top: 20px;
+
+        #lista .caixa {
+            margin: 20px;
             background-color: gray;
             text-align: center;
             border-radius: 5px;
             width: 300px;
             padding: 20px;
         }
-        .caixa h3{
+
+        .caixa h3 {
             padding-top: 15px;
         }
-        .caixa p{  
+
+        .caixa p {
             padding-top: 15px;
             padding-bottom: 20px;
-            
+        }
+
+        #depoimentos {
+            background-color: gray;
+            text-align: center;
+            padding: 10px;
+            justify-content: baseline;
+            /* margin-top: 200px; */
+        }
+
+        #depoimentos * {
+            padding: 10px;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: end;
+        }
+
+        #conteiner {
+            display: flex;
+            height: 100vh;
+            flex-direction: column;
+            justify-content: space-between;
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <h1>Minha Marca</h1>
-        <nav>
-            <a href="#">A</a>
-            <a href="#">B</a>
-            <a href="#">C</a>
-        </nav>
-    </header>
-    <section id="principal">
-        <h2>Transforma suas ideias em realidade</h2>
-        <p>Nosso produto ajuda você a alcançar seus objetivos de forma, simples, rápida e eficiente.</p>
-        <button>Quero Começar Agora</button>
-    </section>
-    <section id="lista">
-        <div class="caixa">
-            <h3>Rápido</h3>
-            <p>Obtenha resultados em tempo record com nossa solução.</p>
+
+    <div id="conteiner">
+        <div id="grupo01">
+            <header>
+                <h1>Minha Marca</h1>
+                <nav>
+                    <a href="#">A</a>
+                    <a href="#">B</a>
+                    <a href="#">C</a>
+                </nav>
+            </header>
+            <section id="principal">
+                <h2>Transforma suas ideias em realidade</h2>
+                <p>Nosso produto ajuda você a alcançar seus objetivos de forma, simples, rápida e eficiente.</p>
+                <button>Quero Começar Agora</button>
+            </section>
+            <section id="lista">
+                <div class="caixa">
+                    <h3>Rápido</h3>
+                    <p>Obtenha resultados em tempo record com nossa solução.</p>
+                </div>
+                <div class="caixa">
+                    <h3>Simples</h3>
+                    <p>Interface amigável para rodos os níveis de experiência.</p>
+                </div>
+                <div class="caixa">
+                    <h3>Seguro</h3>
+                    <p>Seus dados estão protegidos com criptografia de ponta</p>
+                </div>
+            </section>
         </div>
-        <div class="caixa">
-            <h3>Siples</h3>
-            <p>Interface amigável para rodos os níveis de experiência.</p>
+        <div id="grupo02">
+            <section id="depoimentos">
+                <h2>O que nossos clientes dizem</h2>
+                <p>"Mudou completamente minha forma de trabalhar. Recomendo!"</p>
+                <p>"Excelente atendimento e resultados incríveis!"</p>
+            </section>
+            <footer>
+                &copy; 2025 MinhaMarca - Todos os direitos reservados.
+            </footer>
         </div>
-        <div class="caixa">
-            <h3>Seguro</h3>
-            <p>Seus dados estão protegidos com criptografia de ponta</p>
-        </div>
-    </section>
+    </div>
 </body>
 
 </html>

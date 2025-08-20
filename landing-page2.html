@@ -50,7 +50,8 @@
             padding: 15px;
             /* text-align: center; */
         }
-        #principal div{
+
+        #principal div {
             width: 50%;
             /* margin: 30px; */
         }
@@ -76,14 +77,14 @@
         .texto-principal {
             position: relative;
         }
-        
+
         .video-principal {
             position: absolute;
             /* margin: auto; */
             right: 0px;
             top: 8vh;
-            
-        } 
+
+        }
 
         #lista {
             display: flex;
@@ -116,36 +117,67 @@
         }
 
         #atributos {
+            flex-wrap: wrap;
             border-top: 0px;
             border-right: 0px;
             border-bottom: 3px double black;
             border-left: 0px;
         }
-        .secao{
+
+        .secao {
             display: flex;
             justify-content: space-around;
         }
-        .caixa-atributos{
+
+        .caixa-atributos {
             margin: 30px 15px;
         }
-        .caixa-atributos h1{
+         .numero{
+            border: 2px solid black;
+            border-radius: 100%;
+            float: left;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px ;
+        }
+
+        .caixa-atributos h1 {
             line-height: 25px;
+            font-size: xx-large;
         }
+        .caixa-atributos p {
+            margin-top: 5px;
+        }
+
         #depoimentos {
-            background-color: gray;
-            text-align: center;
+            background-color: white;
             padding: 10px;
-            justify-content: baseline;
+            display: flex;
+            /* justify-content: baseline; */
         }
+        .depoimentos{
+            display: flex;
+        }
+       .foto{
+        background-color: grey;
+        width: 450px;
+        height: 150px;
+        border-radius: 5px;
+
+       }
 
         #depoimentos * {
             padding: 10px;
         }
 
         footer {
-            background-color: black;
-            color: white;
-            text-align: end;
+            background-color: grey;
+            color: black;
+            text-align: center;
+            padding: 30px;
         }
 
         #conteiner {
@@ -178,7 +210,10 @@
                     <button>CTA Button</button>
                 </div>
                 <div class="video-principal">
-                    <iframe width="400" height="315" src="https://www.youtube.com/embed/wU0DH7rRDhM?si=ij3aq4-54tzJauvU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe width="400" height="315" src="https://www.youtube.com/embed/wU0DH7rRDhM?si=ij3aq4-54tzJauvU"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </section>
             <section id="lista">
@@ -202,49 +237,68 @@
             <section id="atributos">
                 <div class="secao">
                     <div class="caixa-atributos">
-                        <h2>(1) Lorem ipsum dolor sit amet.</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Soluta nesciunt voluptates tempora nobis
-                        deleniti inventore saepe</p>
+                        <div class="numero">1</div>
+                        <h2>Lorem ipsum dolor sit amet.</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Soluta nesciunt voluptates tempora
+                            nobis
+                            deleniti inventore saepe</p>
                     </div>
                     <div class="caixa-atributos">
-                        <h2>(2) Lorem ipsum dolor sit amet.</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Soluta nesciunt voluptates tempora nobis
-                        deleniti inventore saepe</p>
+                        <div class="numero">2</div>
+                        <h2>Lorem ipsum dolor sit amet.</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Soluta nesciunt voluptates tempora
+                            nobis
+                            deleniti inventore saepe</p>
                     </div>
                     <div class="caixa-atributos">
-                        <h2>(3) Lorem ipsum dolor sit amet.</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Soluta nesciunt voluptates tempora nobis
-                        deleniti inventore saepe</p>
+                        <div class="numero">3</div>
+                        <h2> Lorem ipsum dolor sit amet.</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Soluta nesciunt voluptates tempora
+                            nobis
+                            deleniti inventore saepe</p>
                     </div>
                 </div>
 
                 <div class="secao">
                     <div class="caixa-atributos">
-                        <h2>(4) Lorem ipsum dolor sit amet.</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Soluta nesciunt voluptates tempora nobis
-                        deleniti inventore saepe</p>
+                        <div class="numero">4</div>
+                        <h2>Lorem ipsum dolor sit amet.</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Soluta nesciunt voluptates tempora
+                            nobis
+                            deleniti inventore saepe</p>
                     </div>
                     <div class="caixa-atributos">
-                        <h2>(5) Lorem ipsum dolor sit amet.</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Soluta nesciunt voluptates tempora nobis
-                        deleniti inventore saepe</p>
+                        <div class="numero">5</div>
+                        <h2>Lorem ipsum dolor sit amet.</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Soluta nesciunt voluptates tempora
+                            nobis
+                            deleniti inventore saepe</p>
                     </div>
                     <div class="caixa-atributos">
-                        <h2>(6) Lorem ipsum dolor sit amet.</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Soluta nesciunt voluptates tempora nobis
-                        deleniti inventore saepe</p>
+                        <div class="numero">6</div>
+                        <h2>Lorem ipsum dolor sit amet.</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Soluta nesciunt voluptates tempora
+                            nobis
+                            deleniti inventore saepe</p>
                     </div>
                 </div>
             </section>
         </div>
         <div id="grupo02">
             <section id="depoimentos">
-                <h2>O que nossos clientes dizem</h2>
-                <p>"Mudou completamente minha forma de trabalhar. Recomendo!"</p>
-                <p>"Excelente atendimento e resultados incríveis!"</p>
+                <div class="depoimentos">
+                    <div class="foto"></div>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit aspernatur fuga nemo iusto. Dicta
+                        temporibus ipsam voluptates reprehenderit, ex corporis!</p>
+                </div>
+                <div class="depoimentos">
+                     <div class="foto"></div>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit aspernatur fuga nemo iusto. Dicta
+                        temporibus ipsam voluptates reprehenderit, ex corporis!</p>
+                </div>
             </section>
             <footer>
-                &copy; 2025 MinhaMarca - Todos os direitos reservados.
+                &copy; Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, deserunt.
             </footer>
         </div>
     </div>

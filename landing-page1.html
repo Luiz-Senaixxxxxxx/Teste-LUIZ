@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Marca</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            border: none;
+        }
+
+        body {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid black;
+        }
+
+        nav a {
+            background-color: black;
+            color: white;
+            margin: 0px 2px;
+            padding: 10px 15px;
+        }
+
+        #principal {
+            background-color: gray;
+            text-align: center;
+        }
+
+        #principal h2 {
+            padding-top: 45px;
+        }
+
+        #principal p {
+            padding-top: 20px;
+            max-width: 400px;
+            margin: auto;
+        }
+
+        #principal button {
+            margin: 30px;
+            padding: 15px 20px;
+        }
+
+        #lista {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        #lista .caixa {
+            margin: 20px;
+            background-color: gray;
+            text-align: center;
+            border-radius: 5px;
+            width: 300px;
+            padding: 20px;
+        }
+
+        .caixa h3 {
+            padding-top: 15px;
+        }
+
+        .caixa p {
+            padding-top: 15px;
+            padding-bottom: 20px;
+        }
+
+        #depoimentos {
+            background-color: gray;
+            text-align: center;
+            padding: 10px;
+            justify-content: baseline;
+            /* margin-top: 200px; */
+        }
+
+        #depoimentos * {
+            padding: 10px;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: end;
+        }
+
+        #conteiner {
+            display: flex;
+            height: 100vh;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="conteiner">
+        <div id="grupo01">
+            <header>
+                <h1>Minha Marca</h1>
+                <nav>
+                    <a href="#">A</a>
+                    <a href="#">B</a>
+                    <a href="#">C</a>
+                </nav>
+            </header>
+            <section id="principal">
+                <h2>Transforma suas ideias em realidade</h2>
+                <p>Nosso produto ajuda você a alcançar seus objetivos de forma, simples, rápida e eficiente.</p>
+                <button>Quero Começar Agora</button>
+            </section>
+            <section id="lista">
+                <div class="caixa">
+                    <h3>Rápido</h3>
+                    <p>Obtenha resultados em tempo record com nossa solução.</p>
+                </div>
+                <div class="caixa">
+                    <h3>Simples</h3>
+                    <p>Interface amigável para rodos os níveis de experiência.</p>
+                </div>
+                <div class="caixa">
+                    <h3>Seguro</h3>
+                    <p>Seus dados estão protegidos com criptografia de ponta</p>
+                </div>
+            </section>
+        </div>
+        <div id="grupo02">
+            <section id="depoimentos">
+                <h2>O que nossos clientes dizem</h2>
+                <p>"Mudou completamente minha forma de trabalhar. Recomendo!"</p>
+                <p>"Excelente atendimento e resultados incríveis!"</p>
+            </section>
+            <footer>
+                &copy; 2025 MinhaMarca - Todos os direitos reservados.
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

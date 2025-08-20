@@ -11,14 +11,18 @@
             padding: 0;
             text-decoration: none;
             border: none;
+            
+        }
+        html{
+            background-color: #dedede;
         }
 
         body {
             font: 100% "Arial";
             max-width: 1200px;
             margin: auto;
+           background-color: white;
         }
-
         header {
             display: flex;
             justify-content: space-between;
@@ -43,10 +47,6 @@
 
         #principal {
             background-color: white;
-            border-top: 0px;
-            border-right: 0px;
-            border-bottom: 3px double black;
-            border-left: 0px;
             padding: 15px;
             /* text-align: center; */
         }
@@ -90,10 +90,7 @@
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
-            border-top: 0px;
-            border-right: 0px;
-            border-bottom: 3px double black;
-            border-left: 0px;
+    
         }
 
         #lista .caixa {
@@ -118,15 +115,12 @@
 
         #atributos {
             flex-wrap: wrap;
-            border-top: 0px;
-            border-right: 0px;
-            border-bottom: 3px double black;
-            border-left: 0px;
         }
 
         .secao {
             display: flex;
             justify-content: space-around;
+            background-color: white;
         }
 
         .caixa-atributos {
@@ -186,6 +180,11 @@
             flex-direction: column;
             justify-content: space-between;
         }
+        hr{
+            border: 1px solid grey;
+            width: 80%;
+            margin: auto;
+        }
     </style>
 </head>
 
@@ -216,6 +215,7 @@
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </section>
+            <hr>
             <section id="lista">
                 <div class="caixa">
                     <h3>Rápido</h3>
@@ -234,6 +234,7 @@
                     <p>Lorem ipsum dolor sit amet.</p>
                 </div>
             </section>
+            <hr>
             <section id="atributos">
                 <div class="secao">
                     <div class="caixa-atributos">
@@ -285,6 +286,7 @@
             </section>
         </div>
         <div id="grupo02">
+            <hr>
             <section id="depoimentos">
                 <div class="depoimentos">
                     <div class="foto"></div>

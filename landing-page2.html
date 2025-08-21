@@ -11,18 +11,20 @@
             padding: 0;
             text-decoration: none;
             border: none;
-            
+
         }
-        html{
+
+        html {
             background-color: #dedede;
         }
 
         body {
             font: 100% "Arial";
-            max-width: 1200px;
+            max-width: 1000px;
             margin: auto;
-           background-color: white;
+            background-color: white;
         }
+
         header {
             display: flex;
             justify-content: space-between;
@@ -86,32 +88,6 @@
 
         }
 
-        #lista {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-    
-        }
-
-        #lista .caixa {
-            margin: 20px;
-            background-color: gray;
-            text-align: center;
-            border-radius: 3px;
-            width: 200px;
-            max-width: auto;
-            padding: 20px;
-            color: gray;
-        }
-
-        .caixa h3 {
-            padding-top: 15px;
-        }
-
-        .caixa p {
-            padding-top: 15px;
-            padding-bottom: 20px;
-        }
 
         #atributos {
             flex-wrap: wrap;
@@ -126,7 +102,38 @@
         .caixa-atributos {
             margin: 30px 15px;
         }
-         .numero{
+
+        #carrossel {
+            display: flex;
+            justify-content: center;
+        }
+        #container{
+            width: 880px;
+            overflow: hidden;
+        }
+
+        #carrossel-container{
+            width: 100%;
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        #carrossel-container div {
+            height: 130px;
+            min-width: 200px;
+            background-color: gray;
+            margin: 10px;
+        }
+
+        #lft-btn, #rgt-btn{
+            font-size: 300%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            width: 5%;
+        }
+
+        .numero {
             border: 2px solid black;
             border-radius: 100%;
             float: left;
@@ -135,13 +142,14 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-right: 10px ;
+            margin-right: 10px;
         }
 
         .caixa-atributos h1 {
             line-height: 25px;
             font-size: xx-large;
         }
+
         .caixa-atributos p {
             margin-top: 5px;
         }
@@ -152,16 +160,21 @@
             display: flex;
             /* justify-content: baseline; */
         }
-        .depoimentos{
+        .depoimentos p{
+            width: 300px;
+        }
+
+        .depoimentos {
             display: flex;
         }
-       .foto{
-        background-color: grey;
-        width: 450px;
-        height: 150px;
-        border-radius: 5px;
 
-       }
+        .foto {
+            background-color: grey;
+            width: 150px;
+            height: 150px;
+            border-radius: 5px;
+
+        }
 
         #depoimentos * {
             padding: 10px;
@@ -180,12 +193,14 @@
             flex-direction: column;
             justify-content: space-between;
         }
-        hr{
+
+        hr {
             border: 1px solid grey;
             width: 80%;
             margin: auto;
         }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
 </head>
 
 <body>
@@ -195,10 +210,10 @@
             <header>
                 <h1>Logo</h1>
                 <nav>
-                    <a href="#">A</a>
-                    <a href="#">B</a>
-                    <a href="#">C</a>
-                    <a href="#">D</a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
                 </nav>
             </header>
             <section id="principal">
@@ -216,24 +231,26 @@
                 </div>
             </section>
             <hr>
-            <section id="lista">
-                <div class="caixa">
-                    <h3>Rápido</h3>
-                    <p>Obtenha resultados em tempo record com nossa solução.</p>
+
+            <section id="carrossel">
+                <div id="lft-btn" onclick="carrossel(-1)">
+                    <i class="fa-solid fa-angle-left"></i>
                 </div>
-                <div class="caixa">
-                    <h3>Simples</h3>
-                    <p>Interface amigável para rodos os níveis de experiência.</p>
-                </div>
-                <div class="caixa">
-                    <h3>Seguro</h3>
-                    <p>Seus dados estão protegidos com criptografia de ponta</p>
-                </div>
-                <div class="caixa">
-                    <h3>Lorem, ipsum.</h3>
-                    <p>Lorem ipsum dolor sit amet.</p>
+                <div id="container">                
+                    <div id="carrossel-container">
+                        <div class="img">1</div>
+                        <div class="img">2</div>
+                        <div class="img">3</div>
+                        <div class="img">4</div>
+                        <div class="img">5</div>
+                        <div class="img">6</div>
+                    </div>
+                </div>    
+                <div id="rgt-btn" onclick="carrossel(1)">
+                    <i class="fa-solid fa-angle-right"></i>
                 </div>
             </section>
+
             <hr>
             <section id="atributos">
                 <div class="secao">
@@ -294,7 +311,7 @@
                         temporibus ipsam voluptates reprehenderit, ex corporis!</p>
                 </div>
                 <div class="depoimentos">
-                     <div class="foto"></div>
+                    <div class="foto"></div>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit aspernatur fuga nemo iusto. Dicta
                         temporibus ipsam voluptates reprehenderit, ex corporis!</p>
                 </div>
@@ -304,6 +321,17 @@
             </footer>
         </div>
     </div>
+    <script>
+        const imgs = document.getElementById("carrossel-container");
+        const img = document.querySelectorAll("#carrossel-container div");
+        let idx = 0;
+        function carrossel(i){
+            idx += i;
+            if(idx < 0) idx = 0;
+            if(idx >= img.length -4) idx = img.length -4;
+            imgs.style.transform = `translateX(${- idx * 220}px)`;
+        }
+    </script>
 </body>
 
 </html>

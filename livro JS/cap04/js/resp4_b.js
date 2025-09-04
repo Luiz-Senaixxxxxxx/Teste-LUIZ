@@ -11,7 +11,7 @@ frm.addEventListener("submit", (e) =>{
 
     if(condutor <= permitida){
         resp.innerText = "Situação: Sem multa"
-    }else if(condutor == multa && condutor < multa){
+    }else if(condutor > permitida && condutor <= multa){
         resp.innerText = "Situação: Multa Leve"
     }else if(condutor > multa ){
         resp.innerText = "Situação: Multa Grave"

@@ -9,7 +9,7 @@ let valorTotal = 0
 frm.addEventListener("submit", (e) => {
     e.preventDefault()
 
-    const descricao = frm.inDescricao.value
+    const descricao = frm.inDescricao.value  
     const valor = Number(frm.inValor.value)
 
     numContas++

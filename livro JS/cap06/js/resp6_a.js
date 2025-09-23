@@ -15,37 +15,32 @@ frm.addEventListener("submit", (e) => {
     e.preventDefault()
     const clube = frm.inClube.value
     clubes.push(clube)
-    let lista = ""
-
-    for(let i = 0; i < clubes.length; i++){
-        lista += `${clubes[i]}  `
-    }
-    resp.innerText = lista // exibe a lista de pacients na página
+  
+    frm.btListar.dispatchEvent(new Event("click"))
     frm.inClube.value = "" // lima conteúdo do campo form
-    frm.inClube.focus() // posiciona o cursor no campo
 
 })
 
 frm.btListar.addEventListener("click", () => {
     //se o tamanho do vetro = 0
-    if (clubes.length == 0 || clubes.length % 2 == 1) {
-        alert("Não há clubes suficientes para o campeonato")
-        frm.inClube.focus()
-        return
+    if (clubes.length == 0) {
+        alert("Lista em branco")
     }
-
-
-    const time = clubes //remover do inicio da fila (e obtem o nome)
-    resp.innerText = time // exibe o nome do paciente em atendimento
-    let lista = ""
-    clubes.forEach((clube, i) => (lista += `${clube} x ${clube}\n`))
-    resp.innerText = lista
+    for (const clube of clubes) {
+        resp.innerText += `${clube}\n`
+    }
 })
 
-frm.btTabela.addEventListener("click", () =>{
-    if(clubes.length % 2 == 1){
-        alert("Não há clubes suficientes para o campeonato")
-        frm.inClube.focus()
+frm.btListar.dispatchEvent(new Event("click"))
+
+frm.btTabela.addEventListener("click", () => {
+    if (clubes.length % 2 == 1) {
+        alert("Deve ser um número PAR de clubes")
         return
+    }
+    resp.innerText = ""
+    for (let i = 0; i < clubes.length / 2; i++) {
+        const element = clubes[i];
+        resp.innerText += `${clubes[i]} x ${clubes[clubes.length - i - 1]}\n `
     }
 })

@@ -1,0 +1,14 @@
+<script>
+    const nota = Number(prompt("Qual a nota"))
+    const situacao = (nota, media = 7) =>{
+        if(nota >= media){
+            alert("Aprovado")
+        }else{
+            alert("Reprovado")
+        }
+    }
+
+    
+    situacao(nota, 4.75)
+    situacao(nota)
+</script>

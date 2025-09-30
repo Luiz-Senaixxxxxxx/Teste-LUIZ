@@ -10,7 +10,7 @@ frm.addEventListener("submit", (e) => {
     for (let i = 1; i < msg.length; i++) {
         criptografia += msg.charAt(i);
     }
-    for (let i = 0; i < msg.length; i + 2) {
+    for (let i = 0; i < msg.length; i = i + 2) {
         criptografia += msg.charAt(i);
     }
     resp.innerText = criptografia

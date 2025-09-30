@@ -2,36 +2,23 @@ const frm = document.querySelector("form")
 const resp1 = document.querySelector("#outResp1")
 const resp2 = document.querySelector("#outResp2")
 
-const valorDesconto = 20/100
-
 frm.addEventListener("submit", (e) =>{
     e.preventDefault()
 
-    const dtMulta = frm.inInfra.value
-    const valor = Number(frm.inValor.value)
-    const hoje = new Date()
-    const dataMulta = new Date()
+    const dataInfracao = frm.inDataInfracao.value
+    const valorMulta = Number(frm.inValorMulta.value)
+    const dataDesconto = new Date()
 
-    const parte = dtMulta.split("-")
-    dataMulta.setDate(Number(parte[2]))
-    dataMulta.setMonth(Number(parte[1])- 1)
-    dataMulta.setFullYear(Number(parte[0]))
+    dataDesconto.setFullYear(dataInfracao[0])
+    dataDesconto.setMonth(dataInfracao[1]+1)
+    dataDesconto.setDate(dataInfracao[2])
 
-    const pagamentoEmDia = hoje - dataMulta
+    dataDesconto +=  (1000 * 60 * 60 * 24 * 90)
 
-    let multa = 0
-    let desc = 0
-
-    if(pagamentoEmDia < 0){
-        const dias = pagamentoEmDia / 7776000000
-        multa = valor / valorDesconto
-    }
-
-    resp1.innerText = `Data limite para pagamento em dia ${dias}`
-    resp2.innerText = `Valor com desconto R$: ${multa}`
-
-
-    //7.776.000.000
-
+    resp1.innerText = " Data Limite oara Pagamento com Desconto:  "
+    resp1.innerText += dataDesconto.getDate().toString().padStart(2, "0")+"/"
+    resp1.innerText += (dataDesconto.getMonth()+1).toString.padStart(2, "0 ")+"/"
+    resp1.innerText += dataDesconto.getFullYear()
+    resp2.innerText = "Valor com desconto R$: " +(valorMulta * 0.8).toFixed(2)
     
 })

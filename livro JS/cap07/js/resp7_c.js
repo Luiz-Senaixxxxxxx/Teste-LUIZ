@@ -9,11 +9,11 @@ frm.addEventListener("submit", (e) =>{
     const valorMulta = Number(frm.inValorMulta.value)
     const dataDesconto = new Date()
 
-    dataDesconto.setFullYear(dataInfracao[0])
-    dataDesconto.setMonth(dataInfracao[1]+1)
-    dataDesconto.setDate(dataInfracao[2])
+    dataDesconto.setFullYear(Number(dataInfracao[0]))
+    dataDesconto.setMonth(Number(dataInfracao[1])+1)
+    dataDesconto.setDate(Number(dataInfracao[2])+90)
 
-    dataDesconto +=  (1000 * 60 * 60 * 24 * 90)
+    //dataDesconto += new Date (1000 * 60 * 60 * 24 * 90)
 
     resp1.innerText = " Data Limite oara Pagamento com Desconto:  "
     resp1.innerText += dataDesconto.getDate().toString().padStart(2, "0")+"/"

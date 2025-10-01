@@ -7,7 +7,7 @@ frm.addEventListener("submit", (e) => {
     const msg = frm.inMsg.value
     let criptografia = ""
 
-    for (let i = 1; i < msg.length; i++) {
+    for (let i = 1; i < msg.length; i = i + 2) {
         criptografia += msg.charAt(i);
     }
     for (let i = 0; i < msg.length; i = i + 2) {
@@ -19,9 +19,9 @@ frm.addEventListener("submit", (e) => {
 frm.btDescript.addEventListener("click", () => {
 
     const criptografada = frm.inMsg.value
-    let temp = criptografada.substr(0,criptografada.length/2)
-
     const msg = []
+
+    let temp = criptografada.substr(0,criptografada.length/2)
     //variável auxiliar para simar os pares
     let aux = 1
     for (let i = 0; i < temp.length; i++) {
@@ -39,5 +39,6 @@ frm.btDescript.addEventListener("click", () => {
         //incremento do próximoo número impar
         aux += 2
     }
+    resp.innerText = msg.join("")
 })
 

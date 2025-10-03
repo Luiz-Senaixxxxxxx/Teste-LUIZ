@@ -21,9 +21,37 @@ function calcular(){
         visor.value = "Erro..."
     }   
 }
-
+// função para calcular a porcentagem 
 function porcentagem(){
     calcular() 
     const visor = document.querySelector("#visor")
     visor.value = Number(visor.value)/100
+}
+
+//operação que transforma os botoes em variáveis clicaveis
+//e cria um switch case para realizar as operações nas calculadora
+const botoes = document.querySelectorAll("button")
+for(const botao of botoes){
+    botao.addEventListener("click", () => {
+        switch(botao.innerText){
+            case "C":
+                limpar() 
+                break;
+
+            case "←":
+                apagar() 
+                break;
+
+            case "%":
+                porcentagem() 
+                break;
+
+            case "=":
+                calcular() 
+                break;
+            default:
+                adicionar(botao.innerText)
+                break;
+        }
+    })
 }

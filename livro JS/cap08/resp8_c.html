@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Resposta Letra 8-C</title>
+</head>
+
+<body>
+    <img src="img/exerc.jpg" class="normal" alt="">
+    <h1>Veterinária Aveniada</h1>
+    <form action="">
+        <p>
+            Valor da Vacina R$:
+            <input type="number" id="inValor" required>
+        </p>
+        <p>
+            Possui Convênio:
+            <input type="radio" id="rbSim" name="convenio" required>Sim
+            <input type="radio" id="rbNao" name="convenio" required checked>Não
+        </p>
+        <p id="pConvenio" class="oculta">
+            Convênio:
+            <select name="" id="inConvenio">
+                <option value="amigo">Amigos dos Animais</option>
+                <option value="saude">Saúde Animal</option>
+            </select>
+        </p>
+        <p>
+            <input type="submit" value="Calcular Desconto">
+        </p>
+    </form>
+    <h3 id="outResp1"></h3>
+    <h3 id="outResp2"></h3>
+    <script src="js/resp8_c.js"></script>
+</body>
+
+</html>

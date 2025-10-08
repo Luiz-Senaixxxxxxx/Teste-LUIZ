@@ -1,7 +1,7 @@
 const frm = document.querySelector("form")
 const tboddy = document.querySelector("tbody")
 
-const lsItem = []
+let lsItem = []
 
 
 frm.addEventListener("submit", (e) => {
@@ -26,19 +26,12 @@ frm.btApagar.addEventListener("click", () => {
     if (index == "") {
         alert("Necessário selecionar 1 item.")
         return
-    } else {
-        const decisao = prompt("Tem certeza que deseja apagar?")
-        if (decisao == "sim".toLowerCase(decisao)) {
-
-            lsItem.splice(index, 1)
-            atualizarTabela()
-
-        }else if(decisao == "nao".toLowerCase(decisao) || "não".toLowerCase(decisao)){
-            alert("Ufa, foi só um engano")
-        }else{
-            alert("Por favor, escreva entre 'sim' ou 'não'...")
-        }
     }
+    if (confirm("Deseja realmente apagar esse item?") == false) {
+        return
+    }
+    lsItem.splice(index, 1)
+    atualizarTabela()
 })
 
 function atualizarTabela() {

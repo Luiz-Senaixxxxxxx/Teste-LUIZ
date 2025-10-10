@@ -37,7 +37,11 @@ frm.btApagar.addEventListener("click", () => {
         atualizarTabela()
     })
 })
-
+const cores = {
+    "Em Fila":"bg-secondary-subtle",
+    "Iniciado":"bg-primary-subtle",
+    "Concluído":"bg-danger-subtle"
+}
 function atualizarTabela() {
     // frm.inIndex.value = ""
     // frm.btNovo.dispatchEvent(new Event("click"))
@@ -50,7 +54,7 @@ function atualizarTabela() {
             tboddy.innerHTML +=
                 `<tr onclick= "prepararEdicao(${cont})">
                 <td>${i.item}</td>
-                <td>${i.status}</td>
+                <td class="${cores[i.status]}">${i.status}</td>
             </tr>`
         }
         cont++

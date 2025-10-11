@@ -38,9 +38,9 @@ frm.btApagar.addEventListener("click", () => {
     })
 })
 const cores = {
-    "Em Fila":"bg-secondary-subtle",
-    "Iniciado":"bg-primary-subtle",
-    "Concluído":"bg-danger-subtle"
+    "Em Fila": "bg-secondary-subtle",
+    "Iniciado": "bg-primary-subtle",
+    "Concluído": "bg-danger-subtle"
 }
 function atualizarTabela() {
     // frm.inIndex.value = ""
@@ -52,7 +52,7 @@ function atualizarTabela() {
     for (let i of lsItem) {
         if (filtro == "" || filtro.includes(i.status)) {
             tboddy.innerHTML +=
-                `<tr onclick= "prepararEdicao(${cont})">
+             `<tr onclick= "prepararEdicao(${cont})">
                 <td>${i.item}</td>
                 <td class="${cores[i.status]}">${i.status}</td>
             </tr>`

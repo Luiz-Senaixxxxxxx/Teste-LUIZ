@@ -38,10 +38,12 @@ frm.btApagar.addEventListener("click", () => {
     })
 })
 const cores = {
+    
     "Em Fila": "bg-secondary-subtle",
     "Iniciado": "bg-primary-subtle",
     "Concluído": "bg-danger-subtle"
 }
+
 function atualizarTabela() {
     // frm.inIndex.value = ""
     // frm.btNovo.dispatchEvent(new Event("click"))

@@ -12,7 +12,7 @@ const lsProduto = [
         valor: 39
     },
     {
-        nome: "Charme de Peroba",
+        nome: "Trio Floresta Negra",
         descricao: "vela aromática - 300g",
         img: "img/vela-01.png",
         valor: 39

@@ -7,6 +7,49 @@
     <title>Livraria Introspecto</title>
 </head>
 <body>
-    
+     <div class="container">
+        <div id="topo">
+            <div class="esquerdo">
+                <h1>Livraria Introspecto</h1>
+                <p>Encontre sua próxima aventura em nossas estantes</p>
+            </div>
+
+            <div class="direito">
+                <div id="btLivro">
+                    <img src="img/pilha-de-tres-livros.png" alt="icon-livros">
+                    <span id="qt"></span>
+                </div>
+            </div>
+        </div>
+        <div class="Livross">
+            <div class="Livro">
+                <img src="img/memorias-postumas-de-bras-cuba.jpg" alt="livro01">
+                <p class="nome">Memórias póstumas de Brás cuba</p>
+                <p class="descricao">Machado de Assis</p>
+                <p class="valor">R$39,00</p>
+                <div><img src="img/pilha-de-tres-livros.png" alt="icone-livros"></div>
+            </div>
+        </div>
+        <div class="carrinho ocultar">
+            <table>
+                <thead>
+                    <tr>
+                        <th width="60%">Livro</th>
+                        <th width="10%">Quantidade</th>
+                        <th width="10%">Valor</th>
+                        <th width="10%">Parcial</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <form>
+                <label for="inNome">Nome</label>
+                <input type="text" id="inNome" required>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </div>
+    <script src="js/produtos.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

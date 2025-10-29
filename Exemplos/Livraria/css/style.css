@@ -9,7 +9,7 @@
 .container {
     width: 785px;
     /* height: 100vh; */
-    background-color: #efedec;
+    background-color: #F0FFF0;
     margin: auto;
     padding: 50px;
 }
@@ -30,7 +30,7 @@ p {
 }
 
 #btVela {
-    background-color: #3b0a0a;
+    background-color: #B0E0E6;
     border-radius: 100%;
     width: 50px;
     height: 50px;
@@ -73,7 +73,7 @@ p {
 }
 
 .produto {
-    background-color: #ffff;
+    background-color: #F0FFFF;
     text-align: center;
     width: 210px;
     padding: 20px;
@@ -104,7 +104,7 @@ p {
 }
 
 .marcado {
-    background-color: #3b0a0a;
+    background-color: #B0E0E6;
 }
 
 .marcado p {
@@ -148,7 +148,7 @@ p {
 }
 
 td {
-    background-color: #3b0a0a;
+    background-color: #00CED1;
     color: white;
     padding: 5px;
     text-align: center;
@@ -179,7 +179,7 @@ form #inNome {
 }
 
 form input[value] {
-    background-color: #3b0a0a;
+    background-color: #66CDAA;
     padding: 5px 10px;
     color: white;
     font-size: large;
@@ -189,7 +189,7 @@ form input[value] {
 }
 
 form input[value]:hover {
-    background-color: rgb(215, 212, 212);
+    background-color: #008080;
     color: #3b0a0a;
     border: #3b0a0a solid 1px;
 }
